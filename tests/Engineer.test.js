@@ -1,34 +1,42 @@
-const Employee = require('../lib/employee');
+const Engineer = require('../lib/engineer.js');
 
-describe("Employee", () => {
+describe("Engineer", () => {
     describe('Initialization', () => {
-        it('should initiate an object', () => {
-            const obj = new Employee();
-            expect(typeof(obj)).toEqual('object');
+        it('should create an object', () => {
+            const engineer = new Engineer('John Doe', 1, 'something@gmail.com', 'gitName');
+            expect(typeof(engineer)).toEqual('object');
         });
-    });
-
-    describe('Name', () => {
-        it('should create new name', () => {
-            const obj = new Employee('George');
-            expect(typeof(obj)).toEqual('George');
-        });
-    });
-
-    describe('Id', () => {
-        it('should create new id', () => {
-            const obj = new Id('123');
-            expec(typeof(obj)).toEqual('123');
-        });
-    });
-
-    describe('Email', () => {
-        it('should create new email', () => {
-            const obj = new Id('something@gmai.com');
-            expec(typeof(obj)).toEqual('something@gmail.com');
-        });
-    });
-
     
-    
+        it('should take a name, id, email and set them as properties on an object', ()=> {
+            const name = 'John Doe';
+            const id = 1;
+            const email = 'johndoe@something@gmail.com';
+            const engineer = new Engineer(name, id, email, github);
+            expect(engineer.name).toEqual(name);
+            expect(engineer.id).toEqual(id);
+            expect(engineer.email).toEqual(email);
+            expect(engineer.github).toEqual(github);
+        });
+    });
+
+    describe('getGithub', () => {
+        it('should return gitub username passed to the constructor', ()=> {
+            const name = 'John Doe';
+            const id = 1;
+            const email = 'johndoe@something@gmail.com';
+            const gitHub = 'gitName';
+            const engineer = new Engineer(name, id, email, github);
+            expect(engineer.getGithub()).toEqual(github);
+        });
+    });
+
+    describe('getGithub', () => {
+        it('should return Engineer', ()=> {
+            const name = 'John Doe';
+            const id = 1;
+            const email = 'johndoe@something@gmail.com';
+            const engineer = new Engineer(name, id, email);
+            expect(engineer.getRole()).toEqual('Engineer');
+        });
+    });
 });
