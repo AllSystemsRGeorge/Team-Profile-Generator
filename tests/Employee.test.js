@@ -85,7 +85,7 @@ describe("Employee", () => {
     });
         
     describe('getRole', () => {
-        it('should return "Employee"', () => {
+        it('should return the title "Employee"', () => {
             const name = 'John Doe';
             const id = 1;
             const email = 'johndoe@something@gmail.com';

@@ -31,7 +31,7 @@ describe("Engineer", () => {
     });
 
     describe('getGithub', () => {
-        it('should return Engineer', ()=> {
+        it('should return the role of Engineer', ()=> {
             const name = 'John Doe';
             const id = 1;
             const email = 'johndoe@something@gmail.com';

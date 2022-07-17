@@ -30,4 +30,15 @@ describe("Intern", () => {
             expect(intern.getSchool()).toEqual(school.trim());
         });
     });
+
+    describe('getRole', () => {
+        it('returns the role of "Intern"', () => {
+            const name = 'John Doe';
+            const id = 1;
+            const email = 'johndoe@something@gmail.com';
+            const school = 'Acme University';
+            const intern = new Intern(name, id, email, school);
+            expect(intern.getRole()).toEqual("Intern");
+        });
+    });    
 });
